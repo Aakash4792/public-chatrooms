@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+    </style>
+    <title>Chat Room</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="title">
+            Iris
+        </div>
+        <div class="text">
+            Choose a chatroom
+        </div>
+        <div class="buttons">
+            <button id="general">#general</button>
+            <button id="gaming">#gaming</button>
+            <button id="music">#music</button>
+            <button id="sports">#sports</button>
+        </div>
+        <div class="chat-window">
+            <ul class="chat-list"></ul>
+        </div>
+        <form class="chat-form">
+            <input type="text" name="message" id="message" placeholder="Enter message">
+            <input type="submit" id="send" value="Send">
+        </form>
+        <form class="nameform">
+            <input type="text" name="username" placeholder="Update new name" autocomplete="off">
+            <input type="submit" value="Update name">
+        </form>
+        <div class="update-message"></div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js" integrity="sha512-F+u8eWHrfY8Xw9BLzZ8rG/0wIvs0y+JyRJrXjp3VjtFPylAEEGwKbua5Ip/oiVhaTDaDs4eU2Xtsxjs/9ag2bQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+       apiKey: "AIzaSyCb-Zycq0KsWxW98cmoGcOJsLPjkK7bbYM",
+       authDomain: "fir-test-662c9.firebaseapp.com",
+       projectId: "fir-test-662c9",
+       storageBucket: "fir-test-662c9.appspot.com",
+       messagingSenderId: "118738230357",
+       appId: "1:118738230357:web:8840eaba4b2087849e48dc",
+       measurementId: "G-0CBDTSH1S3"  //Change this block for every project
+    };
+    firebase.initializeApp(config);
+    const db = firebase.firestore();  //database reference
+  </script>
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

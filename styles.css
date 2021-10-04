@@ -1,0 +1,185 @@
+/*
+black : 
+#1A1A1D
+grey:
+#4E4E50
+dark brown:
+#702233
+dark pink:
+#940740
+light pink:
+#C20840
+
+font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Lobster', cursive;
+
+*/
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #1A1A1D;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    height: auto;
+    width: 50%;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.title{
+    font-size: 5rem;
+    color : #C20840;
+    font-family: 'Lobster', cursive;
+    font-weight: 700;
+    padding: 2rem;
+    letter-spacing: 3px;
+}
+
+.text{
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Merriweather Sans', sans-serif;
+    padding: 1rem;
+}
+.buttons{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+button{
+    color: white;
+    background-color: #C20840;
+    border-style: none;
+    padding: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 3px;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: #940740;
+}
+.chat-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}.chat-list > li {
+    width: 100%;
+    text-align: left;
+    border: 1px solid rgba(232, 232, 232, 0.2);
+    margin : 0.1em auto;
+    padding: 1em;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.chat-list > li > .username {
+    font-size: 1.3em;
+}
+.chat-list > li > .message {
+    margin-left: 0.3em;
+}
+.chat-list > li > .time {
+    margin-top: 1em;
+}
+form{
+    width: 100%;
+    margin: 1rem auto;
+    text-align: left;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+}
+input[type="text"]{
+    width: 80%;
+    padding: 1em;
+    border-radius: 4px;
+    border-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+input[type="submit"]{
+    width: auto;
+    padding: 0.8em;
+    border-radius: 4px;
+    border-style: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-left: 5px;
+    background-color: #C20840;
+    color: white;
+    
+}
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+#send{
+    width: 120px;
+}
+.nameform{
+    padding-bottom: 2rem;
+}
+
+.update-message{
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 2rem;
+}
+@media screen and (max-width:837px){
+    .container{
+        width: 80%;
+    }
+}
+@media screen and (max-width:454px){
+    .container{
+        width: 89%;
+    }
+}
+@media screen and (max-width:389px){
+    .container{
+        width: 95%;
+        margin : 0 2%;
+    }
+    .buttons{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:250px){
+    form{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    form > *{
+        text-align: center;
+        margin: 5px auto;
+    }
+    input[type="submit"]{
+        margin-left:50px;
+    }
+}
